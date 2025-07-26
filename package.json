@@ -1,0 +1,28 @@
+{
+  "name": "trailwithus-backend",
+  "version": "1.0.0",
+  "description": "A high-performance backend server powering",
+  "homepage": "https://github.com/Be-soraj/TrailWithUs-backend#readme",
+  "bugs": {
+    "url": "https://github.com/Be-soraj/TrailWithUs-backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Be-soraj/TrailWithUs-backend.git"
+  },
+  "license": "ISC",
+  "author": "bijen",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

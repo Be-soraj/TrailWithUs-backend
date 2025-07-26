@@ -20,6 +20,6 @@ const userSchema = new Schema({
   gender: {
     type: String,
   },
-});
+},{timestamps: true});
 
 export default model('User', userSchema);

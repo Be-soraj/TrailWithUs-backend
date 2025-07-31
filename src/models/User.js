@@ -3,7 +3,7 @@ import { Schema, model } from 'mongoose';
 const userSchema = new Schema({
   firstName: {
     type: String,
-    required: true,  // Note: fixed typo from 'require' to 'required'
+    required: true,
   },
   lastName: {
     type: String,
@@ -14,12 +14,12 @@ const userSchema = new Schema({
     required: true,
     unique: true,
   },
-  jobTitle: {  // Note: fixed typo from 'jobTitel' to 'jobTitle'
+  jobTitle: {
     type: String,
   },
   gender: {
     type: String,
   },
-},{timestamps: true});
+}, { timestamps: true });
 
-export default model('User', userSchema);
+export default model('User', userSchema, 'users');

@@ -1,6 +1,5 @@
 import Services from '../models/Services.js';
 
-// Helper function for validating required fields
 const validateServiceData = (data) => {
   if (!data.name || !data.price) {
     return { isValid: false, message: "Name and price are required" };
@@ -33,7 +32,6 @@ export const createServices = async (req, res) => {
       });
     }
 
-    // Handle Mongoose validation errors
     if (error.name === 'ValidationError') {
       const messages = Object.values(error.errors).map(val => val.message);
       return res.status(400).json({

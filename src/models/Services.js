@@ -157,27 +157,37 @@ const servicesSchema = new Schema({
     required: false,
     trim: true
   },
+  countryCode: {
+    type: String,
+    require:false,
+    trim: true,
+  },
   reviewCount: {
     type: Number,
     min: 0,
-    required: false
+    required: false,
   },
   information: {
     type: informationSchema,
-    required: false
+    required: false,
   },
   tourPlan: {
     type: tourPlanSchema,
-    required: false
+    required: false,
   },
   location: {
     type: locationSchema,
-    required: false
+    required: false,
   },
   gallery: {
     type: gallerySchema,
-    required: false
-  }
+    required: false,
+  },
+  status: {
+    type: String,
+    enum: ['draft', 'published'],
+    default: 'draft',
+  },
 }, {
   timestamps: true, _id: true
 });

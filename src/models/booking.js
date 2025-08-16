@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose';
 
 const bookingSchema = new Schema({
   serviceId: {
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Service',
     required: true
   },
@@ -66,7 +66,7 @@ bookingSchema.virtual('serviceDetails', {
 });
 
 
-bookingSchema.pre('save', async function(next) {
+bookingSchema.pre('save', async function (next) {
   if (!this.totalPrice || this.isModified('NumberOfTicket')) {
     const service = await this.model('Service').findById(this.serviceId);
     if (service) {

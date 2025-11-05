@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/api', apiRouter);
 app.use('/api/users', userRouter);
-app.use('/api/services', serviceRouter);
+app.use('/api/service', serviceRouter);
 app.use('/api/booking', bookingRoutes);
 
 app.use((err, req, res, next) => {
